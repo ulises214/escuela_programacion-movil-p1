@@ -9,6 +9,7 @@ interface SpriteSvgIconProps {
   alto?: number;
   size?: number;
   style?: React.CSSProperties;
+  src?: string;
 }
 export const SpriteSvgIcon: FC<SpriteSvgIconProps> = ({
   size,
@@ -18,6 +19,7 @@ export const SpriteSvgIcon: FC<SpriteSvgIconProps> = ({
   offsetX = -1,
   offsetY,
   color,
+  src,
 }) => {
   if (!size && !(alto && ancho))
     throw new Error('Must provide a size or height and width');
@@ -30,12 +32,13 @@ export const SpriteSvgIcon: FC<SpriteSvgIconProps> = ({
       ancho={ancho ?? size}
       alto={alto ?? size}
       color={color}
+      src={src ?? SpriteImage}
     />
   );
 };
 const SpriteSvgIconStyle = styled.i<SpriteSvgIconProps>`
   font-size: 1px;
-  background-image: url(${SpriteImage});
+  background-image: url(${(p) => p.src});
   background-repeat: no-repeat;
   display: inline-block;
   vertical-align: middle;

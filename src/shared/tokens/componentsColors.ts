@@ -14,4 +14,5 @@ export class ComponentsColors {
   static headerColorTop = AppColors.whiteDark;
   static hoverButtonBG = AppColors.blueBlack;
   static navMenuDropDownColor = AppColors.blueBlackTransparent;
+  static teamListBG = AppColors.graySemiLight;
 }

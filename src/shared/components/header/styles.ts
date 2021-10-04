@@ -44,4 +44,5 @@ export const HeaderStylesTopItem = styled.li`
 export const HeaderStyles = styled.header`
   display: flex;
   flex-direction: column;
+  overflow: visible;
 `;

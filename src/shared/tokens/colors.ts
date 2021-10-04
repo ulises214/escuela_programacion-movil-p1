@@ -6,6 +6,7 @@ export class AppColors {
   static blueBlack = '#19242D';
   static grayDark = '#474747';
   static grayLight = '#DDDBDD';
+  static graySemiLight = '#eeeeee';
   static gray = '#8a898a';
   static green = '#27a75e';
   static orange = '#cb830e';

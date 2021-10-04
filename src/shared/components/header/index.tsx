@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { TeamList } from '../tramList';
 import { HeaderNavigation } from './navigation';
 import { HeaderStyles } from './styles';
 import { HeaderTitle } from './title';
@@ -13,6 +14,7 @@ export const Header: FC = () => {
       {isLg && <HeaderTop />}
       <HeaderTitle />
       <HeaderNavigation />
+      <TeamList />
     </HeaderStyles>
   );
 };

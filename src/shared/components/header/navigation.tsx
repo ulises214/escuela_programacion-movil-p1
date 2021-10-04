@@ -106,8 +106,8 @@ const NavBrand: FC<{ className: string }> = ({ className }) => {
 
 export const HeaderNavigation: FC = () => {
   return (
-    <HeaderNavigationStyles className='navbar navbar-expand-xl navbar-dark bg-dark'>
-      <div className='container'>
+    <HeaderNavigationStyles className='navbar navbar-expand-xl navbar-dark h-100'>
+      <div className='container sticky-top'>
         <NavBrand className='d-xl-none d-block' />
         <button
           className='navbar-toggler'
