@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { MarcaStoriesStyles } from './styles';
+
 export const MarcaStories: FC = () => {
   return (
-    <MarcaStoriesStyles className='d-flex flex-column p-3'>
+    <div className='d-flex flex-column p-3'>
       <div className='title'>
         <span className='marca'>MARCA</span> STORIES
       </div>
@@ -26,7 +26,7 @@ export const MarcaStories: FC = () => {
           Llamada 📞
         </StoryItem>
       </div>
-    </MarcaStoriesStyles>
+    </div>
   );
 };
 const StoryItem: FC<{ img: string }> = ({ img, children }) => {

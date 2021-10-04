@@ -1,12 +1,14 @@
 import { FC } from 'react';
 import VideoPlay from '../../../img/ICONO-PLAY-VIDEO-HOVER.png';
 import VideoCover from '../../../img/main_video.jpg';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { MarcaStories } from '../marcaStories';
 import { NoticeCard } from '../noticeCard';
 import { NoticeTag } from '../noticeTag';
 import { NumComments } from '../numComments';
 
 export const MainNoticies: FC = () => {
+  const isLg = useMediaQuery('lg');
   return (
     <div className='container'>
       <div className='row'>
@@ -18,7 +20,7 @@ export const MainNoticies: FC = () => {
           <div className='row'>
             {[
               <NoticeCard
-                size='short'
+                size={isLg ? 'short' : 'middle'}
                 type='blue'
                 tagTitle='Serie A'
                 imgSrc='https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/10/04/16333412211896.jpg'
@@ -27,7 +29,7 @@ export const MainNoticies: FC = () => {
                 ¿Qué me has llamado? ¿Mono? Ven aquí y dímelo a la cara
               </NoticeCard>,
               <NoticeCard
-                size='short'
+                size={isLg ? 'short' : 'middle'}
                 tagTitle='MOTOS'
                 type='gold'
                 imgSrc='https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/10/04/16333296339782.jpg'
@@ -37,7 +39,7 @@ export const MainNoticies: FC = () => {
                 historia
               </NoticeCard>,
               <NoticeCard
-                size='short'
+                size={isLg ? 'short' : 'middle'}
                 tagTitle='RealMadrid'
                 type='blue'
                 imgSrc='https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/10/04/16333357585114.jpg'
@@ -46,7 +48,7 @@ export const MainNoticies: FC = () => {
                 El mal de siempre
               </NoticeCard>,
               <NoticeCard
-                size='short'
+                size={isLg ? 'short' : 'middle'}
                 tagTitle='Opinión'
                 type='blue'
                 imgSrc='https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/10/04/16333362170979.jpg'
@@ -55,7 +57,7 @@ export const MainNoticies: FC = () => {
                 "Nervios en... ¿octubre?"
               </NoticeCard>,
               <NoticeCard
-                size='short'
+                size={isLg ? 'short' : 'middle'}
                 tagTitle='RealMadrid'
                 type='blue'
                 imgSrc='https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/10/04/16333357585114.jpg'
